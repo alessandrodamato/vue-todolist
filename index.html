@@ -36,21 +36,11 @@
     </div>
 
     <div class="task-container">
+
       <ul>
-        <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>task....</span>
+
+        <li v-for="(task, index) in todoList" :class="{'done' : task.done === true}">
+          <span>{{task.text}}</span>
           <i class="fa-solid fa-trash-can"></i>
         </li>
 

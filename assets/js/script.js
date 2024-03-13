@@ -4,7 +4,24 @@ createApp({
 
   data(){
     return{
-
+      todoList: [
+        {
+          text: 'Fare la spesa',
+          done: false
+        },
+        {
+          text: 'Studiare Vue',
+          done: true
+        },
+        {
+          text: 'Studiare PHP',
+          done: false
+        },
+        {
+          text: 'Allenarsi',
+          done: true
+        },
+      ],
     }
   },
 
@@ -15,5 +32,5 @@ createApp({
   mounted(){
 
   }
-  
+
 }).mount('#app')
