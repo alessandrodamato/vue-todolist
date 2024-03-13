@@ -4,6 +4,7 @@ createApp({
 
   data(){
     return{
+
       todoList: [
         {
           text: 'Fare la spesa',
@@ -22,14 +23,26 @@ createApp({
           done: true
         },
       ],
+      tempText:''
     }
   },
 
   methods:{
+
     deleteTask(i){
-      this.todoList.splice(i, 1)
+      this.todoList.splice(i, 1);
       ////////////////////////////////////aggiungere check sul booleano
+    },
+
+    addTask(){
+      const newTask = {
+        text: this.tempText,
+        done: false
+      }
+      this.todoList.unshift(newTask);
+      this.tempText = '';
     }
+
   },
 
   mounted(){
