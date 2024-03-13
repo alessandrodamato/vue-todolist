@@ -25,7 +25,9 @@ createApp({
       ],
       tempText: '',
       errorMsg: '',
-      deleteMsg: ''
+      deleteMsg: '',
+      isCheckedMsg: 'Seleziona',
+      isChecked: false
     }
   },
 
@@ -54,6 +56,19 @@ createApp({
         this.tempText = '';
         this.errorMsg = '';
       }
+    },
+
+    toggleSelection(){
+      this.isChecked = !this.isChecked;
+      this.todoList.forEach((el, i) => {
+        if (this.isChecked) {
+          this.todoList[i].done = true;
+          this.isCheckedMsg = 'Deseleziona';
+        } else {
+          this.todoList[i].done = false
+          this.isCheckedMsg = 'Seleziona';
+        }
+      });
     }
 
   },

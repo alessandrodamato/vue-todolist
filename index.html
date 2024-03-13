@@ -31,12 +31,15 @@
     <div class="new-task">
 
       <input
+        id="write-task"
         v-model.trim="tempText"
         @keyup.enter="addTask()"
         placeholder="Nuovo task"
         type="text"
       >
       <button @click="addTask()">Aggiungi</button>
+      <input id="toggle-all" type="checkbox" @click="toggleSelection()">
+      <label>{{isCheckedMsg}} tutto</label>
       <p class="error">&nbsp;{{errorMsg}}{{deleteMsg}}&nbsp;</p>
 
     </div>
