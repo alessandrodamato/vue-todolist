@@ -24,20 +24,27 @@ createApp({
         },
       ],
       tempText: '',
-      errorMsg: ''
+      errorMsg: '',
+      deleteMsg: ''
     }
   },
 
   methods:{
 
     deleteTask(i){
-      this.todoList.splice(i, 1);
-      ////////////////////////////////////aggiungere check sul booleano
+      if (this.todoList[i].done === true) {
+        this.todoList.splice(i, 1);
+        this.deleteMsg = '';
+      } else {
+        this.deleteMsg = 'Impossibile cancellare dalla lista una task non svolta!';
+        this.errorMsg = '';
+      }
     },
 
     addTask(){
       if (this.tempText.length < 4) {
         this.errorMsg = 'Inserire un testo di almeno 4 caratteri';  
+        this.deleteMsg = '';
       } else {
         const newTask = {
           text: this.tempText,
