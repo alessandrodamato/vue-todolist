@@ -17,4 +17,11 @@ Bonus:
 1 - esporre un messaggio di errore se il testo inserito ha meno di 4 caratteri  
 2 - cliccando sul testo dell’item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)  
 3 - rendere eliminabili solo i task con done === true. In caso contrario esporre un messaggio di errore diverso dal precedente  
-4 - Se la lista è vuota stampare “Non sono presenti task” al posto della lista  
+4 - Se la lista è vuota stampare “Non sono presenti task” al posto della lista 
+
+## Svolgimento
+1. creare un array di oggetti, contenenti due proprietà: text e done
+2. stampare dinamicamente con un v-for ogni `<li>` e di default qualcuno di essi avrà il text sbarrato
+3. creare una funzione che cancelli gli elementi dall'array in base all'indice corrispettivo
+4. creare una variabile temporanea
+5. creare una funzione che aggiunga elementi alla lista tramite invio sull'input e click sul bottone
