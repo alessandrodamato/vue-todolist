@@ -26,7 +26,10 @@ createApp({
   },
 
   methods:{
-
+    deleteTask(i){
+      this.todoList.splice(i, 1)
+      ////////////////////////////////////aggiungere check sul booleano
+    }
   },
 
   mounted(){
