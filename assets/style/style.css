@@ -65,6 +65,9 @@ img{
 .task-container li:hover{
   background-color: white;
 }
+.task-container li span{
+  cursor: pointer;
+}
 .task-container li i{
   float: right;
   line-height: 40px;
