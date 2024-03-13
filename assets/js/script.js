@@ -23,7 +23,8 @@ createApp({
           done: true
         },
       ],
-      tempText:''
+      tempText: '',
+      errorMsg: ''
     }
   },
 
@@ -35,12 +36,17 @@ createApp({
     },
 
     addTask(){
-      const newTask = {
-        text: this.tempText,
-        done: false
+      if (this.tempText.length < 4) {
+        this.errorMsg = 'Inserire un testo di almeno 4 caratteri';  
+      } else {
+        const newTask = {
+          text: this.tempText,
+          done: false
+        }
+        this.todoList.unshift(newTask);
+        this.tempText = '';
+        this.errorMsg = '';
       }
-      this.todoList.unshift(newTask);
-      this.tempText = '';
     }
 
   },

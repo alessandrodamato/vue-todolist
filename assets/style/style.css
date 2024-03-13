@@ -18,6 +18,7 @@ img{
 }
 
 .error{
+  margin-top: 20px;
   color: red;
   font-size: .9rem;
 }
